@@ -1,0 +1,15 @@
+""" Set SP, LCL, ARG """
+def init():
+    asm_code = "@261\n"
+    asm_code += "D = A\n"
+    asm_code += "@SP\n"
+    asm_code += "M = D\n"
+    asm_code += "@LCL\n"
+    asm_code += "M = D\n"
+    asm_code += "@256\n"
+    asm_code += "D = A\n"
+    asm_code += "@ARG\n"
+    asm_code += "M = D\n"
+    asm_code += "@Sys.init\n"
+    asm_code += "0; JMP\n"
+    return asm_code
